@@ -8,41 +8,51 @@ import Linkedin from '../icons/Linkedin.astro';
 import Mail from '../icons/Mail.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Layout from '../layouts/Layout.astro';
+import Code from '../icons/Code.astro';
+import Projects from '../components/Projects.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Porfolio de iadev - Desarrollador y Programador Web" description="Portfolio de iadev, un desarrollador web apasionado por la UX/UI. Con múltiples proyectos y cursos completados, disponible para trabajar.">
-	<main>
-		<SectionContainer class="py-44 pb-24">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
 			<img class="rounded-full w-12 h-12 mb-4" src="/ia-logo-white.png" alt="iadev photo">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hey, soy iadev <a href="https://ve.linkedin.com/" target="_blank" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
-			<h2 class="text-2xl text-wrap">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, soy iadev <a href="https://ve.linkedin.com/" target="_blank" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span>Múltiples proyectos y cursos completados.</span> <span class="text-yellow-200/90">Desarrollador Web y Apasionado de la UX/UI.</span> <span class="text-red-200/90">De Bolívar, Venezuela 🇻🇪. </span><span class="opacity-85">Me gusta crear aplicaciones centradas en el usuario.</span>
 			</h2>
-			<nav class="flex gap-x-4 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://ve.linkedin.com/">
-					<Linkedin class="w-6 h-6" />
+					<Linkedin class="size-4 md:size-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/iadev2005">
-					<Github class="w-6 h-6" />
+					<Github class="size-4 md:size-6" />
 					GitHub
 				</SocialPill>
 				<SocialPill href="mailto:iadev0721@gmail.com">
-					<Mail class="w-6 h-6" />
+					<Mail class="size-4 md:size-6" />
 					iadev0721@gmail.com
 				</SocialPill>
 			</nav>
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7"/>
 				Experiencia laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
